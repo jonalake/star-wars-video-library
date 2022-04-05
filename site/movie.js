@@ -14,14 +14,15 @@ fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
         movieDetail.innerHTML = `
             <a href="movie.html?movie=${queryString.get("movie")}">${response.title}</a>
             <img class="poster" src="" />
+            <h2>Characters</h2>
+            <ul class="characters"></ul>
+            <h2>Opening Crawl</h2>
             <div class="crawl_parent">
                 <div class="crawl_container hidden">
                     <h3>${response.title}</h3>
                     <p class="test_crawl">${response.opening_crawl}</p>
                 </div>
             </div>
-            <h2>Characters</h2>
-            <ul class="characters">
         `
         if (response.title === "A New Hope") {
             fetch(`http://www.omdbapi.com/?t=Star+Wars&apikey=cba21048`)
