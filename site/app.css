@@ -14,6 +14,41 @@ body {
     margin-bottom: 50px;
 }
 
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    padding: 12px; 
+}
+
+a:hover {
+    color: #ffdd18;
+    transition: all .5s ease;
+}
+
+h1 {
+    margin: 25px;
+    padding-top: 25px;
+    font-size: 48px;
+}
+
+h1 > a {
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 32px;
+    padding: 25px;
+}
+
+time {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+
+
 .hidden {
     display: none;
 }
