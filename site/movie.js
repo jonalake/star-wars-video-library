@@ -12,6 +12,7 @@ fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
         const movieDetail = document.createElement("div")
         movieDetail.classList.add("movie")
         movieDetail.innerHTML = `
+            <a href="movie.html?movie=${queryString.get("movie")}">${response.title}</a>
             <img class="poster" src="" />
             <h3>${response.title}</h3>
             <p>${response.opening_crawl}</p>
