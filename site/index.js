@@ -1,4 +1,5 @@
 const ul = document.querySelector("ul")
+const spinner = document.querySelector(".spinner")
 
 fetch("https://swapi.dev/api/films")
     .then(response => response.json())
@@ -10,10 +11,11 @@ fetch("https://swapi.dev/api/films")
                 movieListing.classList = "movie-listing"
                 movieListing.innerHTML = `
                     <a href="movie.html?movie=${++count}">${movie.title}</a>
-                    <time>${movie.release_date}</time>
+                    <time>${movie.release_date.slice(0,4)}</time>
                 `
                 return movieListing
             }).forEach(movie => {
                 ul.append(movie)
+                spinner.classList.add("hidden")
             })
     })
