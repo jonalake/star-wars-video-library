@@ -120,6 +120,6 @@ li {
     }
     100% {
         top: -6000px;
-        transform: rotateX(25deg) translateZ(-2500px)
+        transform: rotateX(30deg) translateZ(-1000px)
     }
 }
