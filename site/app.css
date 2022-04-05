@@ -73,13 +73,9 @@ time {
     justify-content: center;
 }
 
-.movie {
-    width: 800px;
-}
-
 h3 {
     font-family: 'Franklin Gothic Medium', sans-serif;
-    font-size: 64px;
+    font-size: 200px;
     text-transform: uppercase;
     color: #ffdd18;
     padding: 35px;
@@ -91,7 +87,7 @@ h3 {
 
 p {
     font-family: 'Franklin Gothic Medium', sans-serif;
-    font-size: 48px;
+    font-size: 100px;
     text-align: justify;
 }
 
@@ -100,3 +96,30 @@ li {
     font-family: 'Franklin Gothic Medium', sans-serif;
     font-size: 36px;
 }
+
+.crawl_parent {
+    position: sticky;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    perspective: 400px;
+}
+
+.crawl_container {
+    position: relative;
+    top: -100px;
+    transform-origin: 50% 100%;
+    animation: 90s crawl_container 1s infinite linear;
+}
+
+@keyframes crawl_container {
+    0% {
+        top: 600px;
+        transform: rotateX(20deg) translateZ(0);
+    }
+    100% {
+        top: -6000px;
+        transform: rotateX(25deg) translateZ(-2500px)
+    }
+}
+

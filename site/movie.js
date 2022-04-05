@@ -14,8 +14,12 @@ fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
         movieDetail.innerHTML = `
             <a href="movie.html?movie=${queryString.get("movie")}">${response.title}</a>
             <img class="poster" src="" />
-            <h3>${response.title}</h3>
-            <p>${response.opening_crawl}</p>
+            <div class="crawl_parent">
+                <div class="crawl_container hidden">
+                    <h3>${response.title}</h3>
+                    <p class="test_crawl">${response.opening_crawl}</p>
+                </div>
+            </div>
             <h2>Characters</h2>
             <ul class="characters">
         `
@@ -47,5 +51,7 @@ fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
             li.textContent = `${response.name}`
             ul.append(li)
             spinner.classList.add("hidden")
+            const crawlContainer = document.querySelector(".crawl_container")
+            crawlContainer.classList.remove("hidden")
         })
     })
