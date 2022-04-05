@@ -57,13 +57,13 @@ time {
     display: none;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-}
-
 .poster {
     padding: 12px;
+}
+
+.movie_detail {
+    display: flex;
+    justify-content: center;
 }
 
 .movie {

@@ -13,7 +13,7 @@ fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
         movieDetail.classList.add("movie")
         movieDetail.innerHTML = `
             <img class="poster" src="" />
-            <a href="movie.html?movie=${queryString.get("movie")}">${response.title}</a>
+            <h3>${response.title}</h3>
             <p>${response.opening_crawl}</p>
             <h2>Characters</h2>
             <ul class="characters">
