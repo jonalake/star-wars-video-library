@@ -21,14 +21,14 @@ fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
             <ul class="characters">
         `
         if (response.title === "A New Hope") {
-            fetch(`http://www.omdbapi.com/?t=Star+Wars&&apikey=28629b10`)
+            fetch(`http://www.omdbapi.com/?t=Star+Wars&apikey=cba21048`)
                 .then(response => response.json())
                 .then(response => {
                     const poster = document.querySelector(".poster")
                     poster.src = `${response.Poster}`
                 })
         } else {
-            fetch(`http://www.omdbapi.com/?t=${response.title}&&apikey=28629b10`)
+            fetch(`http://www.omdbapi.com/?t=${response.title}&apikey=cba21048`)
                 .then(response => response.json())
                 .then(response => {
                     const poster = document.querySelector(".poster")
@@ -47,5 +47,6 @@ fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
             const li = document.createElement("li")
             li.textContent = `${response.name}`
             ul.append(li)
+            spinner.classList.add("hidden")
         })
     })
