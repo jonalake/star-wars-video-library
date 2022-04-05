@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'star_jediregular';
+    src: url('starjedi-webfont.woff2') format('woff2'),
+        url('starjedi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'star_jediregular';
+    color: #ffdd18;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 50px;
+}
