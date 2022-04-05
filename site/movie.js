@@ -6,7 +6,7 @@ const spinner = document.querySelector(".spinner")
 fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
     .then(response => response.json())
     .then(response => {
-        console.log(response)
+        main.classList.add("movie_detail")
         const title = document.querySelector("title")
         title.textContent = response.title
         const movieDetail = document.createElement("div")
@@ -14,8 +14,6 @@ fetch(`https://swapi.dev/api/films/${queryString.get("movie")}`)
         movieDetail.innerHTML = `
             <img class="poster" src="" />
             <a href="movie.html?movie=${queryString.get("movie")}">${response.title}</a>
-            <time>${response.release_date.slice(0, 4)}</time>
-            <h2>Opening Crawl</h2>
             <p>${response.opening_crawl}</p>
             <h2>Characters</h2>
             <ul class="characters">

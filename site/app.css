@@ -43,6 +43,12 @@ h2 {
     padding: 25px;
 }
 
+.movie > h2 {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 54px;
+    padding-top: 50px;
+}
+
 time {
     font-family: 'Franklin Gothic Medium', sans-serif;
 }
@@ -51,13 +57,39 @@ time {
     display: none;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.poster {
+    padding: 12px;
+}
+
+.movie {
+    width: 800px;
+}
+
+.movie > a {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #ffdd18;
+    padding: 35px;
+}
+
+.movie > a:hover {
+    color: #ffdd18;
+}
+
 p {
     font-family: 'Franklin Gothic Medium', sans-serif;
-    font-size: 20px;
+    font-size: 48px;
+    text-align: justify;
 }
 
 li {
     list-style: none;
     font-family: 'Franklin Gothic Medium', sans-serif;
-    font-size: 20px;
+    font-size: 36px;
 }
